@@ -1,0 +1,61 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>
+      Elegi la música
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="tabs" color="danger">
+      <ion-segment-button value="recomenda">
+        Recomendá
+      </ion-segment-button>
+      <ion-segment-button value="lista">
+        Hasta Ahora
+      </ion-segment-button>
+    </ion-segment>
+</ion-toolbar>
+
+<ion-content>
+  <div [ngSwitch]="tabs" >
+    <ion-list *ngSwitchCase="'recomenda'" >
+        <ion-searchbar (keyup)='buscarCanciones($event)'
+        placeholder='Buscar Canciones'></ion-searchbar>
+      <ion-item *ngFor='let cancion of canciones'>
+          <ion-thumbnail slot='start'>
+              <img src="{{cancion.album.images[0].url}}">
+          </ion-thumbnail>
+          <div class='texto-musica ion-padding'>
+            <h2 >{{cancion.name}}</h2>
+            <p>{{cancion.artists[0].name}}</p>
+          </div>
+          <div slot='end'>
+          <ion-button clear color="danger" (click)='insertLista(cancion)'>Votar</ion-button>
+          </div>
+          
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'lista'">
+        <ion-item *ngFor='let cancion of lista'>
+            <ion-thumbnail slot='start'>
+                <img src="{{cancion.imagen}}">
+            </ion-thumbnail>
+            <div class='texto-musica ion-padding'>
+              <h2 >{{cancion.nombre}}</h2>
+              <p>{{cancion.artista}}</p>
+            </div>
+            <div  slot='end' style="display: inline-block">
+              <ion-button clear color="danger" (click)='sumarVoto(cancion)'>Votada: {{cancion.votada}}</ion-button>  
+            </div>
+            
+        </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>
+
+
+

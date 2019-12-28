@@ -1,0 +1,78 @@
+<ion-header  no-border style="padding-top: 10px; padding-bottom: 10px">
+  <ion-toolbar no-border>
+    <ion-title>
+      #Gianla&Caco
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+    <ion-card class="welcome-card">
+      <img src="/assets/logos/logo_1.png" alt="" />
+      <ion-card-header>
+        
+        <!-- <h3 class="faltan" >Faltan:</h3>        
+        <countdown 
+                    units=" Days | Hours | Minutes | Seconds"  
+                    end="November 16, 2019 20:00:00"
+                    [text]='text'></countdown> -->
+                    <ion-button color="danger" round class="llegar" (click)='reservar()'>R.S.V.P</ion-button>          
+      </ion-card-header>
+      
+      <!-- <ion-card-content>
+        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+      </ion-card-content> -->
+    </ion-card>
+    <ion-card-title class="c-title">
+      Galeria de Fotos
+    </ion-card-title>
+    <ion-card class="welcome-card">
+      <ion-slides pager='true'>
+        <ion-slide class='image-slide'
+                  style='background-image: url("/assets/fotos/foto_4.jpeg")'>
+        </ion-slide>
+        <ion-slide class='image-slide rotate'
+                  style='background-image: url("/assets/fotos/foto_2.jpeg")'>
+        </ion-slide>
+        <ion-slide class='image-slide'
+                  style='background-image: url("/assets/fotos/foto_3.jpeg")'>
+        </ion-slide>
+        <ion-slide class='image-slide rotate'
+                  style='background-image: url("/assets/fotos/foto_5.jpeg")'>
+        </ion-slide>
+        <ion-slide class='image-slide'
+                  style='background-image: url("/assets/fotos/foto_6.jpeg")'>
+        </ion-slide>
+        <ion-slide class='image-slide'
+                  style='background-image: url("/assets/fotos/foto_7.jpeg")'>
+        </ion-slide>
+        <ion-slide class='image-slide rotate'
+                  style='background-image: url("/assets/fotos/foto_9.jpeg")'>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+    
+    
+        <ion-card-title class="c-title">
+            La Iglesia
+          </ion-card-title>
+        <ion-card>
+          <img src="/assets/fotos/catedral.jpg"/>
+          <div class="card-title">Catedral de Morón</div>
+          <div class="card-subtitle">16 de Noviembre 20:00hs</div>
+          <ion-button color="danger" round class='llegar' (click)='abrirMapa("https://goo.gl/maps/MFsNzcfN1j69Znrq5")'>Cómo llegar</ion-button>
+        </ion-card>
+        <ion-card-title class="c-title">
+            La Fiesta
+          </ion-card-title>
+        <ion-card>
+          <img src="/assets/fotos/la_quinta.png"/>
+          <div class="card-title">La Quinta de Bella Vista</div>
+          <div class="card-subtitle">16 de Noviembre 21:30hs</div>
+          <ion-button color="danger" round class="llegar" (click)='abrirMapa("https://goo.gl/maps/4fsWKBa3WBMwEfrU7")'>Cómo llegar</ion-button>
+        </ion-card>
+
+      
+ </ion-content>
+    
+

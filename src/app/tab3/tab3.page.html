@@ -1,0 +1,22 @@
+<ion-header no-border>
+    <ion-toolbar>
+      <ion-title>
+        Lista de Regalos
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="card-background-page">
+  <ion-card *ngFor='let regalo of regalos' class="welcome-card">
+      <ion-slides  pager='true'>
+          <ion-slide *ngFor='let foto of regalo.fotos' class='image-slide'
+                    [style.backgroundImage]="'url('+ foto +')'">
+          </ion-slide>
+      </ion-slides>
+
+      <ion-card-header>
+        <h3 class='c-title'>{{regalo.nombre}}</h3>
+        <ion-button color="danger" round class="regalar" (click)="modalRegalo(regalo)">REGALAR !</ion-button>
+      </ion-card-header>
+  </ion-card>
+</ion-content>

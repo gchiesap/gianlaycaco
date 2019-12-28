@@ -1,0 +1,93 @@
+@font-face {
+  font-family: encabezados;
+  src: url('../../assets/fonts/encabezados.woff2');
+}
+@font-face {
+  font-family: amatic;
+  src: url('../../assets/fonts/amatic.woff2');
+}
+
+
+
+* ion-title{
+  font-family: amatic;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.welcome-card img {
+  //max-height: 35vh;
+  overflow: hidden;
+}
+
+.image-slide {
+  width: 100%;
+  height: 350px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+ .c-title { 
+  font-size: 40px;
+  text-align: center;
+  font-family: amatic;
+  padding: 5px;
+}
+
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    align-content: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
+  
+
+}
+.llegar {
+    
+  width: 50%;
+  //position: relative;
+  font-family: amatic;
+  font-size: 20px;
+}
+
+.estilo{
+  font-size: 25px;
+  font-weight: 300;
+  align-content: center;
+  text-align: center;
+  font-family: amatic !important;
+}
+
+.faltan {
+  text-align: center;
+  font-family: amatic;
+  font-size: 30px;
+  font-weight: 900;
+}

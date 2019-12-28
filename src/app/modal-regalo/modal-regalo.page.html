@@ -1,0 +1,35 @@
+
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start"  (click)='salirSinRegalar()'>
+        <ion-icon name="arrow-round-back"  ></ion-icon> <p class='volver'>volver</p>
+      </ion-buttons>
+    <ion-title>{{regaloData.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+  <ion-item>
+    <ion-label position='floating'>De parte de: </ion-label>
+    <ion-input type='text' [(ngModel)]='nombre'></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position='floating'>Deja un mensaje para los novios:</ion-label>
+      <ion-textarea [(ngModel)]='mensaje'></ion-textarea>
+      
+  </ion-item>
+
+
+  <div *ngFor="let link of regaloData.links_mp">
+      <ion-button 
+                  color="danger" 
+                  round class="position" 
+                  expand="block"
+                  (click)='salirRegalando(link)'>{{link.id}}</ion-button>
+  </div>
+
+  
+
+</ion-content>

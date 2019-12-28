@@ -1,0 +1,32 @@
+.position {
+    align-content: center;
+    text-align: center;
+    padding-top: 10px;
+    width: 100%;
+    //position: relative;
+    font-family: amatic;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: encabezados;
+    src: url('../../assets/fonts/encabezados.woff2');
+  }
+  @font-face {
+    font-family: amatic;
+    src: url('../../assets/fonts/amatic.woff2');
+  }
+  
+  
+  * ion-title{
+    font-family: amatic;
+    font-size: 40px;
+    text-align: center;
+  
+  }
+
+  .voler{
+      font-family: amatic !important;
+      font-size: 10px !important;
+  }
